@@ -1,60 +1,8 @@
-// "use client";
-// import React, { useState } from "react";
-// import { HiMenuAlt4, HiX } from "react-icons/hi";
-// import { motion } from "framer-motion";
-// import "./Navbar.scss";
-// import Link from "next/link";
-
-// const Navbar = () => {
-//   const [toggle, setToggle] = useState(false);
-
-//   return (
-//     <nav className="app__navbar">
-//       <div className="app__navbar-logo">
-//         <img src="./logo.jpg" alt="logo" />
-//         <span className="app__navbar-logo_text">TUSH DEV</span>
-//       </div>
-//       <ul className="app__navbar-links">
-//         {["home", "about", "work", "skills", "contact"].map((item) => (
-//           <li className="app__flex p-text" key={`link-${item}`}>
-//             <div />
-//             <a href={`#${item}`}>{item}</a>
-//           </li>
-//         ))}
-//       </ul>
-
-//       <div className="app__navbar-menu">
-//         <HiMenuAlt4 onClick={() => setToggle(true)} />
-
-//         {toggle && (
-//           <motion.div
-//             whileInView={{ x: [300, 0] }}
-//             transition={{ duration: 0.5, ease: "easeOut" }}
-//           >
-//             <HiX onClick={() => setToggle(false)} />
-//             <ul>
-//               {["home", "about", "work", "skills", "contact"].map((item) => (
-//                 <li key={item}>
-//                   <a href={`#${item}`} onClick={() => setToggle(false)}>
-//                     {item}
-//                   </a>
-//                 </li>
-//               ))}
-//             </ul>
-//           </motion.div>
-//         )}
-//       </div>
-//     </nav>
-//   );
-// };
-
-// export default Navbar;
 "use client";
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { HiOutlineMenuAlt3 } from "react-icons/hi";
-
+import Image from "next/image";
 const navLinks = [
   {
     id: "about",
@@ -127,17 +75,17 @@ const Navbar = () => {
               key={nav.id}
               className={`${
                 active === nav.title ? "text-purple-500" : "text-secondary"
-              } hover:text-[#313bac] hover:underline hover:decoration-[#313bac] text-[17px] font-semibold cursor-pointer`}
+              }  text-[17px] font-semibold cursor-pointer`}
               onClick={() => setActive(nav.title)}
             >
-              <a href={`#${nav.id}`}>{nav.title}</a>
+              <Link href={`#${nav.id}`}>{nav.title}</Link>
             </li>
           ))}
         </ul>
 
         <div className="sm:hidden flex flex-1 justify-end items-center">
           <img
-            src={toggle ? "/close.png" : "./menu.png"}
+            src={toggle ? "/close.png" : "/menu.png"}
             alt="menu"
             className="w-[30px] h-[30px] object-contain"
             onClick={() => setToggle(!toggle)}
@@ -152,7 +100,7 @@ const Navbar = () => {
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
-                  className={`font-poppins font-semibold cursor-pointer text-[14px] ${
+                  className={`font-poppins font-semibold cursor-pointer text-[16px] ${
                     active === nav.title ? "text-purple-500" : "text-secondary"
                   }`}
                   onClick={() => {

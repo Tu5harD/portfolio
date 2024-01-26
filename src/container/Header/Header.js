@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -62,12 +61,10 @@ const Header = () => (
             className="col-span-4 place-self-center mt-4 lg:mt-0"
           >
             <div className="rounded-full bg-[#000000] border-2 border-purple-500   w-[270px] h-[270px] lg:w-[400px] lg:h-[400px] relative">
-              <Image
+              <img
                 src="/hero-image.png"
                 alt="hero image"
                 className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 w-[250px] sm:w-[350px] h-[250px] sm:h-[350px]"
-                width={350}
-                height={350}
               />
             </div>
           </motion.div>

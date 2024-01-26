@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-
 import { AppWrap, MotionWrap } from "../../wrapper";
 import "./Skills.scss";
 
@@ -119,7 +118,7 @@ const Skills = () => {
             <motion.div key={experience.year} className="app__skills-exp-item">
               <div className="app__skills-exp-year flex items-center justify-center flex-col gap-4">
                 <p className="bold-text ">{experience.year}</p>
-                <img src={experience.img} alt="" className="w-6 h-14" />
+                <img src={experience.img} alt="" className="w-6 h-14 invert" />
               </div>
 
               <motion.div className="app__skills-exp-works">

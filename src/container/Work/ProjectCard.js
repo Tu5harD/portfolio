@@ -1,8 +1,6 @@
 import React from "react";
 import { AiFillEye, AiFillGithub } from "react-icons/ai";
-
 import Link from "next/link";
-
 const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
   return (
     <div>

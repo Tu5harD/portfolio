@@ -6,7 +6,10 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import emailjs from "@emailjs/browser";
 import "./Footer.scss";
-import SendButton from "../Button/SendButton";
+
+import SendIcon from "@mui/icons-material/Send";
+import Link from "next/link";
+
 const Footer = () => {
   const form = useRef();
   const sendEmail = (e) => {
@@ -82,18 +85,21 @@ const Footer = () => {
       <div className="app__footer-cards">
         <div className="app__footer-card ">
           <img src="./email.png" alt="email" />
-          <a
-            href="mailto:tushardukane9@gmail.com"
+          <Link
+            href="/mailto:tushardukane9@gmail.com"
             className="text-[#313bac] font-semibold"
           >
             tushardukane9@gmail.com
-          </a>
+          </Link>
         </div>
         <div className="app__footer-card">
           <img src="./mobile.png" alt="phone" />
-          <a href="tel:+91 7499833141" className="text-[#313bac] font-semibold">
+          <Link
+            href="/tel:+91 7499833141"
+            className="text-[#313bac] font-semibold"
+          >
             +91 7499833241
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -125,17 +131,15 @@ const Footer = () => {
             name="message"
           />
         </div>
-        {/* <button type="submit" className="p-text cursor-pointer">
-          Send Message
-        </button> */}
-
-        {/* <Button className=" mt-3" variant="contained" endIcon={<SendIcon />}>
-          Send
-        </Button> */}
+        <span className="px-1 py-1  rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 font-semibold  hover:bg-slate-800 text-white mt-3 hover:skew-x-12">
+          <span className=" bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2 flex flex-row gap-2 items-center justify-center">
+            Send Now <SendIcon />
+          </span>
+        </span>
       </form>
-      <div>
+      {/* <div>
         <SendButton />
-      </div>
+      </div> */}
     </>
   );
 };
