@@ -4,10 +4,10 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 const navLinks = [
-  {
-    id: "about",
-    title: "About",
-  },
+  // {
+  //   id: "about",
+  //   title: "About",
+  // },
   {
     id: "work",
     title: "Work",
