@@ -30,8 +30,8 @@ const Header = () => (
               />
             </h1>
             <p className="text-[#dbdbdb] font-semibold text-base sm:text-lg mb-6 lg:text-xl uppercase italic">
-              "One of the best programming skills you can have is knowing when
-              to walk away for a while."
+              &ldquo;One of the best programming skills you can have is knowing
+              when to walk away for a while.&ldquo;
             </p>
 
             <div className=" flex gap-2 flex-wrap">
@@ -45,7 +45,7 @@ const Header = () => (
               </Link>
 
               <Link
-                href="/"
+                href="/Resume.pdf"
                 className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 font-semibold  hover:bg-slate-800 text-white mt-3"
               >
                 <span className=" bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2 flex flex-row gap-2 items-center justify-center">
