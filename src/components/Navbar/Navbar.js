@@ -53,6 +53,7 @@
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import { HiOutlineMenuAlt3 } from "react-icons/hi";
 
 const navLinks = [
   {
@@ -136,9 +137,9 @@ const Navbar = () => {
 
         <div className="sm:hidden flex flex-1 justify-end items-center">
           <img
-            src={toggle ? "/close.png" : "/menu.png"}
+            src={toggle ? "/close.png" : "./menu.png"}
             alt="menu"
-            className="w-[20px] h-[20px] object-contain"
+            className="w-[30px] h-[30px] object-contain"
             onClick={() => setToggle(!toggle)}
           />
 
