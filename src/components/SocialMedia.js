@@ -6,7 +6,7 @@ const SocialMedia = () => (
       <img src="/github.png" className="ml-1 w-9 h-9" alt="" />
     </Link>
     <Link href={"https://www.linkedin.com/in/tushardukane/"}>
-      <img src="/linkedin.png" className="ml-1 w-9 h-9" alt="" />
+      <img src="/Linkedin.png" className="ml-1 w-9 h-9" alt="" />
     </Link>
     <Link href={"https://wa.me/+917499833141"}>
       <img src="/whatsapp.png" alt="" className="ml-1 w-8 h-8" />
