@@ -106,9 +106,7 @@ const Skills = () => {
                   transition={{ duration: 7, repeat: Infinity }}
                 />
               </div>
-              <p className="p-text text-black uppercase font-bold">
-                {skill.name}
-              </p>
+              <p className="p-text text-black  font-bold">{skill.name}</p>
             </motion.div>
           ))}
         </motion.div>
