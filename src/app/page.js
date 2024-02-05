@@ -8,7 +8,9 @@ const page = () => {
     <div className="app">
       <Navbar />
       <Floating />
-      <Header />
+      <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+        <Header />
+      </div>
       {/* <About /> */}
       <Work />
       <Skills />

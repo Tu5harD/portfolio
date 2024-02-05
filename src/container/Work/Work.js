@@ -1,171 +1,3 @@
-// "use client";
-// import React, { useState } from "react";
-// import { AiFillEye, AiFillGithub } from "react-icons/ai";
-// import { motion } from "framer-motion";
-
-// import { AppWrap, MotionWrap } from "../../wrapper";
-// import "./Work.scss";
-// const filterWork = [
-//   {
-//     imgUrl: "./work1.png",
-//     name: "Logsabha Cafeteria Website",
-//     projectLink: "https://loksabhacafe.netlify.app/",
-//     codeLink: "https://github.com/Tu5harD/LogsabhaProject",
-//     title: "Logsabha Cafeteria",
-//     description: "",
-//     tag: "Cafeteria Website",
-//   },
-//   {
-//     imgUrl: "./work2.jpeg",
-//     name: "Nalanda Pre-Schoolre",
-//     projectLink: "https://nalandainfo.com/about",
-//     codeLink: "./",
-//     title: "Nalanda Pre-School",
-//     description: "",
-//     tag: "Pre-School Website",
-//   },
-//   {
-//     imgUrl: "./work3.jpeg",
-//     name: "Ecoware Pollution",
-//     projectLink: "https://ecoaware.netlify.app/",
-//     codeLink: "https://github.com/Tu5harD/EarthPollution",
-//     title: "Ecoaware Polltion",
-//     description: "",
-//     tag: "Ecoaware Website",
-//   },
-//   {
-//     imgUrl: "./work4.jpeg",
-//     name: "Cattle Feeds Website",
-//     projectLink: "https://tushartraders.netlify.app/",
-//     codeLink: "https://github.com/Tu5harD/ReactJS-Website-Tushar-Traders",
-//     title: "Tushar Traders",
-//     description: "",
-//     tag: "Cattle Feeds Website",
-//   },
-//   {
-//     imgUrl: "./work5.png",
-//     name: "Cattle Feeds Website",
-//     projectLink: "https://tushar-dukane.vercel.app/",
-//     codeLink: "https://github.com/Tu5harD/tushar-traders-frontend",
-//     title: "Online Mobile Store",
-//     description: "",
-//     tag: "E-Commerce Website",
-//   },
-// ];
-// const Work = () => {
-//   const [activeFilter, setActiveFilter] = useState("All");
-//   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
-
-//   // useEffect(() => {
-//   //   const query = '*[_type == "works"]';
-
-//   //   client.fetch(query).then((data) => {
-//   //     setWorks(data);
-//   //     setFilterWork(data);
-//   //   });
-//   // }, []);
-
-//   const handleWorkFilter = (item) => {
-//     setActiveFilter(item);
-//     setAnimateCard([{ y: 100, opacity: 0 }]);
-
-//     setTimeout(() => {
-//       setAnimateCard([{ y: 0, opacity: 1 }]);
-
-//       if (item === "All") {
-//         setFilterWork(works);
-//       } else {
-//         setFilterWork(works.filter((work) => work.tags.includes(item)));
-//       }
-//     }, 500);
-//   };
-
-//   return (
-//     <>
-//       <h2 className="head-text">
-//         My Creative <span>Portfolio</span> Section
-//       </h2>
-
-//       {/* <div className="app__work-filter">
-//         {["UI/UX", "Web App", "Mobile App", "React JS", "All"].map(
-//           (item, index) => (
-//             <div
-//               key={index}
-//               onClick={() => handleWorkFilter(item)}
-//               className={`app__work-filter-item app__flex p-text ${
-//                 activeFilter === item ? "item-active" : ""
-//               }`}
-//             >
-//               {item}
-//             </div>
-//           )
-//         )}
-//       </div> */}
-
-//       <motion.div
-//         animate={animateCard}
-//         transition={{ duration: 0.5, delayChildren: 0.5 }}
-//         className="app__work-portfolio"
-//       >
-//         {filterWork.map((work, index) => (
-//           <div
-//             className="app__work-item app__flex hover:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
-//             key={index}
-//           >
-//             <div className="app__work-img app__flex">
-//               <img src={work.imgUrl} alt={work.name} />
-
-//               <motion.div
-//                 whileHover={{ opacity: [0, 1] }}
-//                 transition={{
-//                   duration: 0.25,
-//                   ease: "easeInOut",
-//                   staggerChildren: 0.5,
-//                 }}
-//                 className="app__work-hover app__flex"
-//               >
-//                 <a href={work.projectLink} target="_blank" rel="noreferrer">
-//                   <motion.div
-//                     whileInView={{ scale: [0, 1] }}
-//                     whileHover={{ scale: [1, 0.9] }}
-//                     transition={{ duration: 0.25 }}
-//                     className="app__flex"
-//                   >
-//                     <AiFillEye />
-//                   </motion.div>
-//                 </a>
-//                 <a href={work.codeLink} target="_blank" rel="noreferrer">
-//                   <motion.div
-//                     whileInView={{ scale: [0, 1] }}
-//                     whileHover={{ scale: [1, 0.9] }}
-//                     transition={{ duration: 0.25 }}
-//                     className="app__flex"
-//                   >
-//                     <AiFillGithub />
-//                   </motion.div>
-//                 </a>
-//               </motion.div>
-//             </div>
-
-//             <div className="app__work-content app__flex">
-//               <h4 className="bold-text text-black">{work.title}</h4>
-//               <p className="p-text text-black" style={{ marginTop: 10 }}>
-//                 {work.description}
-//               </p>
-
-//               <div className="app__work-tag app__flex bg-gray-200">
-//                 <p className="p-text text-black">{work.tag}</p>
-//               </div>
-//             </div>
-//           </div>
-//         ))}
-//       </motion.div>
-//     </>
-//   );
-// };
-
-// export default AppWrap(MotionWrap(Work, "app__works"), "work", "app__blackbg");
-
 "use client";
 import React, { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
@@ -188,7 +20,7 @@ const projectsData = [
 
   {
     id: 2,
-    title: "Potography Portfolio Website",
+    title: "PreSchool Website",
     description: "Project 2 description",
     image: "./work2.jpeg",
     tag: ["All", "Web"],
@@ -244,9 +76,7 @@ const Work = () => {
 
   return (
     <section id="projects">
-      <div className="head-text text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 ">
-        My Projects{" "}
-      </div>
+      <div className="head-text text-black">My Projects </div>
       <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
         <ProjectTag
           onClick={handleTagChange}
@@ -290,4 +120,8 @@ const Work = () => {
   );
 };
 
-export default AppWrap(MotionWrap(Work, "app__works"), "work", "app__blackbg");
+export default AppWrap(
+  MotionWrap(Work, "app__works"),
+  "work",
+  "app__primarybg"
+);

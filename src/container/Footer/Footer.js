@@ -6,7 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import emailjs from "@emailjs/browser";
 import "./Footer.scss";
-
+import Image from "next/image";
 import SendIcon from "@mui/icons-material/Send";
 import Link from "next/link";
 
@@ -77,27 +77,22 @@ const Footer = () => {
   return (
     <>
       <h2 className="head-text">
-        <div className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 ">
-          Take a coffee & chat with me
-        </div>
+        <div className=" text-black">Take a coffee & chat with me</div>
       </h2>
       <ToastContainer />
       <div className="app__footer-cards">
         <div className="app__footer-card ">
-          <img src="./email.png" alt="email" />
+          <Image src="/email.png" alt="email" width={50} height={50} />
           <Link
             href="/mailto:tushardukane9@gmail.com"
-            className="text-[#313bac] font-semibold"
+            className="text-black font-semibold"
           >
             tushardukane9@gmail.com
           </Link>
         </div>
         <div className="app__footer-card">
-          <img src="./mobile.png" alt="phone" />
-          <Link
-            href="/tel:+91 7499833141"
-            className="text-[#313bac] font-semibold"
-          >
+          <Image src="/mobile.png" alt="phone" width={50} height={50} />
+          <Link href="/tel:+91 7499833141" className="text-black font-semibold">
             +91 7499833241
           </Link>
         </div>
@@ -131,7 +126,7 @@ const Footer = () => {
             name="message"
           />
         </div>
-        <span className="px-1 py-1  rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 font-semibold  hover:bg-slate-800 text-white mt-3 hover:skew-x-12">
+        <span className=" mt-4 rounded-full  text-white">
           <span className=" bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2 flex flex-row gap-2 items-center justify-center">
             Send Now <SendIcon />
           </span>
@@ -147,5 +142,5 @@ const Footer = () => {
 export default AppWrap(
   MotionWrap(Footer, "app__footer"),
   "contact",
-  "app__blackbg"
+  "app__primarybg"
 );

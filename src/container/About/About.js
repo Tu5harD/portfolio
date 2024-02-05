@@ -3,7 +3,7 @@ import React, { useStates } from "react";
 import { motion } from "framer-motion";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import "./About.scss";
-// import { urlFor, client } from "../../client";
+import Image from "next/image";
 const abouts = [{}];
 const About = () => {
   return (
@@ -22,7 +22,12 @@ const About = () => {
             className="app__profile-item"
             key={about.title + index}
           >
-            <img src={about.imgUrl} alt={about.title} />
+            <Image
+              src={about.imgUrl}
+              alt={about.title}
+              width={10}
+              height={10}
+            />
             <h2 className="bold-text" style={{ marginTop: 20 }}>
               {about.title}
             </h2>

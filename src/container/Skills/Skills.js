@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import "./Skills.scss";
-
+import Image from "next/image";
 const skills = [
   { icon: "./html.png", name: "HTML5", bgColor: "#fecdd3" },
   { icon: "./css.png", name: "Css3", bgColor: "#bfdbfe" },
@@ -71,9 +71,7 @@ const Skills = () => {
   return (
     <>
       <h2 className="head-text flex flex-col sm:flex-row gap-2 sm:gap-4 items-center justify-center">
-        <div className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 ">
-          Skills & Experiences{" "}
-        </div>
+        <div className=" text-black">Skills & Experiences </div>
         <div className=" flex items-center justify-center">
           {/* <img className="w-12 h-12" src="/superman.png" alt="" /> */}
           <motion.img
@@ -86,12 +84,12 @@ const Skills = () => {
         </div>
       </h2>
 
-      <div className="app__skills-container">
-        <motion.div className="app__skills-list">
+      <div className="app__skills-container ">
+        <motion.div className="app__skills-list ">
           {skills.map((skill) => (
             <motion.div
               key={skill.name}
-              className="app__skills-item app__flex"
+              className="app__skills-item app__flex "
               whileInView={{ opacity: [0, 1] }}
               transition={{ duration: 0.5 }}
             >
@@ -108,7 +106,9 @@ const Skills = () => {
                   transition={{ duration: 7, repeat: Infinity }}
                 />
               </div>
-              <p className="p-text text-white font-semibold">{skill.name}</p>
+              <p className="p-text text-black uppercase font-bold">
+                {skill.name}
+              </p>
             </motion.div>
           ))}
         </motion.div>
@@ -118,7 +118,13 @@ const Skills = () => {
             <motion.div key={experience.year} className="app__skills-exp-item">
               <div className="app__skills-exp-year flex items-center justify-center flex-col gap-4">
                 <p className="bold-text ">{experience.year}</p>
-                <img src={experience.img} alt="" className="w-6 h-14 invert" />
+                <Image
+                  src={experience.img}
+                  alt=""
+                  className="w-6 h-14 "
+                  width={10}
+                  height={10}
+                />
               </div>
 
               <motion.div className="app__skills-exp-works">
@@ -131,7 +137,7 @@ const Skills = () => {
                     data-tip
                     data-for={work.name}
                   >
-                    <h4 className="bold-text text-white">{work.name}</h4>
+                    <h4 className="bold-text text-black">{work.name}</h4>
                     <p className="p-text">{work.company}</p>
                     <p className="p-text">{work.experience}</p>
                   </motion.div>
@@ -148,5 +154,5 @@ const Skills = () => {
 export default AppWrap(
   MotionWrap(Skills, "app__skills"),
   "skills",
-  "app__blackbg"
+  "app__whitebg"
 );
