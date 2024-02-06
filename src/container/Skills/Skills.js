@@ -4,25 +4,35 @@ import { motion } from "framer-motion";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import "./Skills.scss";
 import Image from "next/image";
-const skills = [
-  { icon: "./html.png", name: "HTML5", bgColor: "#fecdd3" },
-  { icon: "./css.png", name: "Css3", bgColor: "#bfdbfe" },
-  { icon: "./sass.png", name: "Sass", bgColor: "#fecdd3" },
-  { icon: "./mu5.png", name: "Material UI", bgColor: "#bfdbfe" },
-  { icon: "./javascript.png", name: "Javascript", bgColor: "#fef3c7" },
-  { icon: "./node.png", name: "Node", bgColor: "#dcfce7" },
-  { icon: "./react.png", name: "React JS", bgColor: "#cffafe" },
-  { icon: "./nextjs.png", name: "Next JS", bgColor: "#f1f5f9" },
-  { icon: "./redux.png", name: "Redux", bgColor: "#ede9fe" },
-  { icon: "./typescript.png", name: "Typescript", bgColor: "#bfdbfe" },
-  { icon: "./figma.png", name: "Figma", bgColor: "#f3e8ff" },
-  { icon: "./mongodb.png", name: "MongoDB", bgColor: "#d1fae5" },
-  { icon: "./git.png", name: "Git", bgColor: "#fee2e2" },
-  { icon: "./github.png", name: "Git Hub", bgColor: "#f5f5f5" },
-  { icon: "./cpp.png", name: "CPP", bgColor: "#bfdbfe" },
-  { icon: "./python.png", name: "Python", bgColor: "#e0f2fe" },
+import { oad } from "../../../public/assets";
 
-  // Repeat the sample data for brevity
+const skills = [
+  { icon: "./assets/images/flutter.png", name: "Flutter", bgColor: "#f5f5f5" },
+  { icon: "./assets/images/nextjs.png", name: "Next JS", bgColor: "#f1f5f9" },
+  { icon: "./assets/images/react.png", name: "React JS", bgColor: "#cffafe" },
+  { icon: "./assets/images/figma.png", name: "Figma", bgColor: "#f3e8ff" },
+  { icon: "./assets/images/node.png", name: "Node", bgColor: "#dcfce7" },
+  {
+    icon: "./assets/images/javascript.png",
+    name: "Javascript",
+    bgColor: "#fef3c7",
+  },
+  {
+    icon: "./assets/images/typescript.png",
+    name: "Typescript",
+    bgColor: "#bfdbfe",
+  },
+  { icon: "./assets/images/redux.png", name: "Redux", bgColor: "#ede9fe" },
+  { icon: "./assets/images/mongodb.png", name: "MongoDB", bgColor: "#d1fae5" },
+  { icon: "./assets/images/html.png", name: "HTML5", bgColor: "#fecdd3" },
+  { icon: "./assets/images/css.png", name: "Css3", bgColor: "#bfdbfe" },
+  { icon: "./assets/images/sass.png", name: "Sass", bgColor: "#fecdd3" },
+  { icon: "./assets/images/mu5.png", name: "Material UI", bgColor: "#bfdbfe" },
+
+  { icon: "./assets/images/git.png", name: "Git", bgColor: "#fee2e2" },
+
+  { icon: "./assets/images/cpp.png", name: "CPP", bgColor: "#bfdbfe" },
+  { icon: "./assets/images/python.png", name: "Python", bgColor: "#e0f2fe" },
 ];
 
 const experiences = [
@@ -35,7 +45,7 @@ const experiences = [
         experience: "Experience - 6 Months",
       },
     ],
-    img: "/oad.png",
+    img: oad,
   },
   {
     year: "2023",
@@ -46,12 +56,12 @@ const experiences = [
         experience: "Experience - Present",
       },
     ],
-    img: "/oad.png",
+    img: oad,
   },
   {
     year: "2023",
     works: [{ name: "Full Stack Web Developer", company: "Freelancer" }],
-    img: "/oad.png",
+    img: oad,
   },
   {
     year: "2024",
@@ -62,9 +72,8 @@ const experiences = [
         experience: "Experience - Present",
       },
     ],
-    img: "/oad.png",
+    img: oad,
   },
-  // Repeat the sample data for brevity
 ];
 
 const Skills = () => {
@@ -73,11 +82,10 @@ const Skills = () => {
       <h2 className="head-text flex flex-col sm:flex-row gap-2 sm:gap-4 items-center justify-center">
         <div className=" text-black">Skills & Experiences </div>
         <div className=" flex items-center justify-center">
-          {/* <img className="w-12 h-12" src="/superman.png" alt="" /> */}
           <motion.img
             alt="Animating Image"
             className="w-12 h-12"
-            src="/superman.png"
+            src="/assets/images/superman.png"
             animate={{ y: [-20, 20, -20], scale: [1, 1.2, 1] }}
             transition={{ repeat: Infinity, duration: 5 }}
           />

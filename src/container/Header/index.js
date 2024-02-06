@@ -8,7 +8,11 @@ import { useScrollTo } from "./hooks/useScrollTo";
 import { useMediaQuery } from "./hooks/media_query";
 import { FaDownload } from "react-icons/fa6";
 import { BiSolidSelectMultiple } from "react-icons/bi";
-export function WelcomeSection() {
+
+import { AppWrap, MotionWrap } from "@/wrapper";
+import React from "react";
+
+const Header = () => {
   const ref = useRef(null);
   const introRef = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -39,7 +43,7 @@ export function WelcomeSection() {
 
   return (
     <LazyMotion features={domAnimation}>
-      <section id="intro" className="section" ref={introRef}>
+      <section id="intro" className="section -mt-14" ref={introRef}>
         <div className="grid grid-cols-1 md:grid-cols-[1fr_0.5fr] lg:grid-cols-[1fr_0.7fr] gap-4 items-center">
           <div className="py-5 md:py-10">
             <h1
@@ -112,15 +116,6 @@ export function WelcomeSection() {
                 transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
               }}
             >
-              {/* <Link
-                href="#projects"
-                onClick={onClick}
-                tabIndex="0"
-                className="btn"
-                aria-label="Latest projects"
-              >
-                See my latest projects
-              </Link> */}
               <div className=" flex gap-2 flex-wrap">
                 <Link
                   href="/#contact"
@@ -148,7 +143,9 @@ export function WelcomeSection() {
       </section>
     </LazyMotion>
   );
-}
+};
+
+export default AppWrap(MotionWrap(Header), "home", "app__blackbg");
 
 function TextElement({ element }) {
   const firstWord = <b>{element.split(" ").at(0)}</b>;

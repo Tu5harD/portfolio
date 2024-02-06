@@ -1,13 +1,10 @@
 "use client";
-
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { close, logo, menu } from "../../../public/assets";
+
 const navLinks = [
-  // {
-  //   id: "about",
-  //   title: "About",
-  // },
   {
     id: "work",
     title: "Work",
@@ -44,7 +41,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`sm:px-16 px-6 w-full flex items-center py-5 fixed top-0 z-20 ${
+      className={`sm:px-16 px-6 w-full flex items-center py-5 app__blackbg top-0 z-20 ${
         scrolled
           ? "bg-opacity-50 backdrop-filter backdrop-blur-lg "
           : "bg-transparent"
@@ -60,11 +57,11 @@ const Navbar = () => {
           }}
         >
           <Image
-            src="/logo.png"
+            src={logo}
             alt="logo"
-            className="w-9 h-9 object-contain"
-            height={10}
-            width={10}
+            className="w-7 h-7 object-contain"
+            height={100}
+            width={100}
           />
           <p className="text-black  text-[18px] font-extrabold cursor-pointer flex ">
             <span className=" text-black"> Tushar &nbsp;</span>
@@ -91,7 +88,7 @@ const Navbar = () => {
 
         <div className="sm:hidden flex flex-1 justify-end items-center">
           <Image
-            src={toggle ? "/close.png" : "/menu.png"}
+            src={toggle ? close : menu}
             alt="menu"
             className="w-[20px] h-[20px] object-contain"
             onClick={() => setToggle(!toggle)}

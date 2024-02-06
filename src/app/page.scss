@@ -12,12 +12,7 @@
 }
 
 .app__blackbg {
-  // background-image: url('../../public/background.jpg');
-  // background-repeat: no-repeat;
-  // background-size: contain;
-  // background-color: rgb(24, 24, 24);
   background-color: #ffffe8;
-
 }
 
 .app__container {
@@ -195,13 +190,4 @@
   .copyright {
     padding: 2rem;
   }
-}
-
-button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
-  -webkit-appearance: button;
-  background-color: #1976d2;
-  background-image: none;
 }

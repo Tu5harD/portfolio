@@ -1,17 +1,24 @@
 "use client";
-
 import React, { useRef } from "react";
 import { AppWrap, MotionWrap } from "../../wrapper";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import emailjs from "@emailjs/browser";
 import "./Footer.scss";
 import Image from "next/image";
 import SendIcon from "@mui/icons-material/Send";
 import Link from "next/link";
+import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { email, mobile } from "../../../public/assets";
 
 const Footer = () => {
   const form = useRef();
+
+  const alertShow = () => {
+    alert(
+      "Sorry, the contact form is currently not working. Please try again later. If your matter is urgent, please call us at +91 7499833141."
+    );
+  };
+
   const sendEmail = (e) => {
     e.preventDefault();
     const name = form.current.name.value;
@@ -36,10 +43,10 @@ const Footer = () => {
     // If all fields have values, proceed with sending the email
     emailjs
       .sendForm(
-        "service_xdx999q",
-        "template_grvoq82",
+        "service_7v9km18",
+        "template_fbj63ga",
         form.current,
-        "Vhlc_EIfChq4oDLyZ"
+        "IG1jF-d5HCq33DRdc"
       )
       .then(
         (result) => {
@@ -74,15 +81,17 @@ const Footer = () => {
         }
       );
   };
+
   return (
     <>
+      <ToastContainer />
+
       <h2 className="head-text">
         <div className=" text-black">Take a coffee & chat with me</div>
       </h2>
-      <ToastContainer />
       <div className="app__footer-cards">
         <div className="app__footer-card ">
-          <Image src="/email.png" alt="email" width={50} height={50} />
+          <Image src={email} alt="email" width={50} height={50} />
           <Link
             href="/mailto:tushardukane9@gmail.com"
             className="text-black font-semibold"
@@ -90,8 +99,8 @@ const Footer = () => {
             tushardukane9@gmail.com
           </Link>
         </div>
-        <div className="app__footer-card">
-          <Image src="/mobile.png" alt="phone" width={50} height={50} />
+        <div className="app__footer-card bg-[#ffffe8]">
+          <Image src={mobile} alt="phone" width={50} height={50} />
           <Link href="/tel:+91 7499833141" className="text-black font-semibold">
             +91 7499833241
           </Link>
@@ -126,15 +135,22 @@ const Footer = () => {
             name="message"
           />
         </div>
-        <span className=" mt-4 rounded-full  text-white">
-          <span className=" bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2 flex flex-row gap-2 items-center justify-center">
+        <span
+          className=" cursor-pointer mt-4 rounded-full  text-white"
+          onClick={alertShow}
+        >
+          <span
+            className=" bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2 flex flex-row gap-2 items-center justify-center"
+            type="submit"
+          >
             Send Now <SendIcon />
           </span>
         </span>
       </form>
-      {/* <div>
-        <SendButton />
-      </div> */}
+      <div className=" flex flex-wrap uppercase sm:hidden text-sm font-medium mt-5 gap-1">
+        <p className="">@2024 Tush Dev</p>
+        <p className="">All rights reserved</p>
+      </div>
     </>
   );
 };

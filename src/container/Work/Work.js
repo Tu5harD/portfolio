@@ -12,7 +12,7 @@ const projectsData = [
     id: 1,
     title: "Cafeteria Website",
     description: "Logsabha Cafeteria Website",
-    image: "./work1.png",
+    image: "./assets/images/work1.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Tu5harD/LogsabhaProject",
     previewUrl: "https://loksabhacafe.netlify.app/",
@@ -21,38 +21,38 @@ const projectsData = [
   {
     id: 2,
     title: "PreSchool Website",
-    description: "Project 2 description",
-    image: "./work2.jpeg",
+    description: "PreSchool Website",
+    image: "./assets/images/work2.jpeg",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Tu5harD/Nalanda_Preschool_Website",
+    previewUrl: "https://nalandainfo.com/about",
   },
   {
     id: 3,
-    title: "E-commerce Application",
+    title: "Ecoaware Website",
     description: "Project 3 description",
-    image: "./work3.jpeg",
+    image: "./assets/images/work3.jpeg",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Tu5harD/EarthPollution",
+    previewUrl: "https://ecoaware.netlify.app",
   },
   {
     id: 4,
-    title: "Food Ordering Application",
+    title: "Cattle Weed Info Website",
     description: "Project 4 description",
-    image: "./work4.jpeg",
-    tag: ["All", "Mobile"],
-    gitUrl: "/",
-    previewUrl: "/",
+    image: "./assets/images/work4.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/Tu5harD/tushar-traders-frontend",
+    previewUrl: "https://tushartraders.vercel.app/",
   },
   {
     id: 5,
-    title: "React Firebase Template",
+    title: "E-commerce Mobile Store Website",
     description: "Authentication and CRUD operations",
-    image: "./work5.png",
+    image: "./assets/images/work5.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Tu5harD/mobile-store-frontend",
+    previewUrl: "https://tushar-dukane.vercel.app/",
   },
 ];
 
@@ -96,7 +96,7 @@ const Work = () => {
           tagIcon={<FaMobileScreen />}
         />
       </div>
-      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+      <ul ref={ref} className="grid md:grid-cols-3 gap-2 sm:gap-8 md:gap-12">
         {filteredProjects.map((project, index) => (
           <motion.li
             key={index}
