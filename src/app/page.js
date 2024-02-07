@@ -7,7 +7,7 @@ const page = () => {
     <div className="app">
       <Navbar />
       <Floating />
-      <Header />
+      {/* <Header /> */}
       <Work />
       <Skills />
       <Footer />
