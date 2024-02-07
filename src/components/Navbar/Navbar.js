@@ -67,7 +67,7 @@ const Navbar = () => {
             <span className=" text-black"> Tushar &nbsp;</span>
             <span className="sm:block hidden">
               {" "}
-              <span className=" text-black ">|</span> Web Designer
+              <span className=" text-black ">|</span> Software Developer
             </span>
           </p>
         </Link>

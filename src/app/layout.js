@@ -4,8 +4,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Tushar | Web Developer Portfolio",
-  description: "Web Developer Portfolio",
+  title: "Tushar | Software Developer Portfolio",
+  description: "Software Developer Portfolio",
   icons: {
     icon: "/assets/icons/t_logo.png",
   },
