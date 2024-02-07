@@ -5,8 +5,8 @@ import Floating from "@/components/Floating";
 const page = () => {
   return (
     <div className="app">
-      <Navbar />
-      <Floating />
+      {/* <Navbar />
+      <Floating /> */}
       {/* <Header /> */}
       <Work />
       <Skills />
