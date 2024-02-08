@@ -65,7 +65,7 @@ const Header = () => {
             <div className="mt-3 relative flex flex-col overflow-hidden">
               <p
                 ref={ref}
-                className="text-[17px] md:text-lg transform-none opacity-100"
+                className="text-[17px] md:text-xl transform-none opacity-100"
                 style={{
                   transform: isInView ? "none" : "translateX(-200px)",
                   opacity: isInView ? 1 : 0,
@@ -99,7 +99,7 @@ const Header = () => {
             <p
               tabIndex="0"
               ref={ref}
-              className="mt-3 mb-5 sm:mb-10 text-gray-700 text-lg font-medium"
+              className="mt-3 mb-5 sm:mb-10 text-gray-700 text-lg sm:text-lg font-medium"
               style={{
                 transform: isInView ? "none" : "translateX(-200px)",
                 opacity: isInView ? 1 : 0,
