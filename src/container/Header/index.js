@@ -58,6 +58,7 @@ const Header = () => {
             >
               <p>
                 Hi, I&apos;m <mark>Tushar</mark> a <mark>passionate</mark>{" "}
+                <br />
                 software developer.
               </p>
             </h1>
