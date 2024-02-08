@@ -43,7 +43,7 @@ const Header = () => {
 
   return (
     <LazyMotion features={domAnimation}>
-      <section id="intro" className="section -mt-14" ref={introRef}>
+      <section className=" -mt-14" ref={introRef}>
         <div className="grid grid-cols-1 md:grid-cols-[1fr_0.5fr] lg:grid-cols-[1fr_0.7fr] gap-4 items-center">
           <div className="py-5 md:py-10">
             <h1
