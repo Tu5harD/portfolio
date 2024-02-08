@@ -78,7 +78,7 @@ const Skills = () => {
         <div className=" flex items-center justify-center">
           <motion.img
             alt="Animating Image"
-            className="w-10 h-10"
+            className="w-12 h-12"
             src="/assets/images/superman.png"
             animate={{ y: [-20, 20, -20], scale: [1, 1.2, 1] }}
             transition={{ repeat: Infinity, duration: 5 }}
@@ -103,6 +103,7 @@ const Skills = () => {
                 <motion.img
                   src={skill.icon}
                   alt={skill.name}
+                  className=" sm:w-8 sm:h-8"
                   // style={{ width: "200px", height: "200px" }}
                   animate={{ rotate: 360 }}
                   transition={{ duration: 7, repeat: Infinity }}
