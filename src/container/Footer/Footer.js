@@ -99,7 +99,7 @@ const Footer = () => {
             tushardukane9@gmail.com
           </Link>
         </div>
-        <div className="app__footer-card bg-[#ffffe8]">
+        <div className="app__footer-cards">
           <Image src={mobile} alt="phone" width={50} height={50} />
           <Link href="/tel:+91 7499833141" className="text-black font-semibold">
             +91 7499833241

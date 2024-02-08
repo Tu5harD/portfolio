@@ -8,7 +8,7 @@ const SocialMedia = () => (
     <Link href={"https://github.com/Tu5harD"}>
       <Image
         src={github}
-        className="ml-1 w-9 h-9"
+        className="ml-1 w-8 h-8"
         alt="github"
         width={50}
         height={50}
@@ -17,7 +17,7 @@ const SocialMedia = () => (
     <Link href={"https://www.linkedin.com/in/tushardukane/"}>
       <Image
         src={linkedin}
-        className="ml-1 w-9 h-9"
+        className="ml-1 w-8 h-8"
         alt="linkedin"
         width={50}
         height={50}
@@ -27,7 +27,7 @@ const SocialMedia = () => (
       <Image
         src={whatsapp}
         alt="whatsapp"
-        className="ml-1 w-9 h-9"
+        className="ml-1 w-8 h-8"
         width={50}
         height={50}
       />
