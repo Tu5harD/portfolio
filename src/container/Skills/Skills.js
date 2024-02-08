@@ -17,22 +17,16 @@ const skills = [
     name: "Javascript",
     bgColor: "#fef3c7",
   },
-  {
-    icon: "./assets/images/typescript.png",
-    name: "Typescript",
-    bgColor: "#bfdbfe",
-  },
   { icon: "./assets/images/redux.png", name: "Redux", bgColor: "#ede9fe" },
   { icon: "./assets/images/mongodb.png", name: "MongoDB", bgColor: "#d1fae5" },
   { icon: "./assets/images/html.png", name: "HTML5", bgColor: "#fecdd3" },
   { icon: "./assets/images/css.png", name: "Css3", bgColor: "#bfdbfe" },
-  { icon: "./assets/images/sass.png", name: "Sass", bgColor: "#fecdd3" },
+
   { icon: "./assets/images/mu5.png", name: "Material UI", bgColor: "#bfdbfe" },
 
   { icon: "./assets/images/git.png", name: "Git", bgColor: "#fee2e2" },
 
   { icon: "./assets/images/cpp.png", name: "CPP", bgColor: "#bfdbfe" },
-  { icon: "./assets/images/python.png", name: "Python", bgColor: "#e0f2fe" },
 ];
 
 const experiences = [
