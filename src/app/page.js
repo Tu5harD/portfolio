@@ -4,7 +4,7 @@ import { Footer, Header, Skills, Work } from "@/container";
 import Floating from "@/components/Floating";
 const page = () => {
   return (
-    <div className="app">
+    <div className="app w-full">
       <Navbar />
       <Floating />
       <Header />
