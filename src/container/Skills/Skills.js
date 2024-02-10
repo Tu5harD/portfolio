@@ -109,7 +109,9 @@ const Skills = () => {
                   transition={{ duration: 7, repeat: Infinity }}
                 />
               </div>
-              <p className="p-text text-black  font-bold">{skill.name}</p>
+              <p className="text-sm leading-4 text-center text-black  font-bold">
+                {skill.name}
+              </p>
             </motion.div>
           ))}
         </motion.div>
@@ -122,7 +124,7 @@ const Skills = () => {
                 <Image
                   src={experience.img}
                   alt=""
-                  className="w-6 h-14 "
+                  className="w-5 h-14 "
                   width={10}
                   height={10}
                 />
@@ -139,8 +141,12 @@ const Skills = () => {
                     data-for={work.name}
                   >
                     <h4 className="bold-text text-black">{work.name}</h4>
-                    <p className="p-text">{work.company}</p>
-                    <p className="p-text">{work.experience}</p>
+                    <p className="text-sm leading-4 text-left">
+                      {work.company}
+                    </p>
+                    <p className="text-sm leading-4 text-left">
+                      {work.experience}
+                    </p>
                   </motion.div>
                 ))}
               </motion.div>

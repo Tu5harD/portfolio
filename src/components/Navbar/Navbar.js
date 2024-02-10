@@ -63,7 +63,7 @@ const Navbar = () => {
             height={100}
             width={100}
           />
-          <p className="text-black  text-[18px] font-extrabold cursor-pointer flex ">
+          <p className="text-black  text-sm font-extrabold cursor-pointer flex ">
             <span className=" text-black"> Tushar &nbsp;</span>
             <span className="sm:block hidden">
               {" "}
@@ -78,7 +78,7 @@ const Navbar = () => {
               key={nav.id}
               className={`${
                 active === nav.title ? "text-purple-500" : "text-secondary"
-              }  text-[17px] font-semibold cursor-pointer`}
+              }  text-sm font-semibold cursor-pointer`}
               onClick={() => setActive(nav.title)}
             >
               <Link href={`#${nav.id}`}>{nav.title}</Link>

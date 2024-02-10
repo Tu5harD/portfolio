@@ -25,10 +25,10 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
               backgroundRepeat: "no-repeat",
             }}
           >
-            <div className="overlay items-center justify-center absolute -bottom-20 text-sm  sm:-bottom-28 left-0 w-full h-full  flex transition-all duration-500 gap-2">
+            <div className="overlay items-center justify-center absolute -bottom-20 text-xs  sm:-bottom-28 left-0 w-full h-full  flex transition-all duration-500 gap-2">
               <Link
                 href={previewUrl}
-                className="cursor-pointer rounded-full border border-gray-900/5 bg-blue-500 uppercase font-medium  text-white opacity-100  p-2 hover:border-gray-900/10 hover:bg-yellow-500 hover:!opacity-100 group-hover:opacity-70 flex flex-row items-center gap-2"
+                className="cursor-pointer rounded-full border border-gray-900/5 bg-blue-500 uppercase font-medium  text-white opacity-100  p-2 hover:border-gray-900/10 hover:bg-yellow-500 hover:!opacity-100 group-hover:opacity-70 flex flex-row items-center gap-2 "
               >
                 <svg
                   width="24"
@@ -58,7 +58,7 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
             </div>
           </div>
           <div className="text-black rounded-b-xl  bg-white py-3 px-4">
-            <h5 className="text-md text-center mt-1 font-semibold">{title}</h5>
+            <h5 className="text-sm text-center mt-1 font-semibold">{title}</h5>
           </div>
         </div>
       </Tilt>

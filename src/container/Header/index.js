@@ -116,7 +116,7 @@ const Header = () => {
                 transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
               }}
             >
-              <div className=" flex gap-2 flex-wrap">
+              <div className=" flex gap-2 flex-wrap text-sm">
                 <Link
                   href="/#contact"
                   className="px-1 inline-block py-1 rounded-full bg-gradient-to-br from-primary-500 to-secondary-500  text-white mt-3"

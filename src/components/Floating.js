@@ -10,7 +10,7 @@ const Floating = () => {
         <Link href={"https://github.com/Tu5harD"}>
           <Image
             src={github}
-            className="ml-1 w-9 h-9 hover:origin-center hover:rotate-45"
+            className="ml-1 w-8 h-8 hover:origin-center hover:rotate-45"
             alt=""
             width={40}
             height={40}
@@ -19,7 +19,7 @@ const Floating = () => {
         <Link href={"https://www.linkedin.com/in/tushardukane/"}>
           <Image
             src={linkedin}
-            className="ml-1 w-9 h-9 hover:origin-center hover:rotate-45"
+            className="ml-1 w-8 h-8 hover:origin-center hover:rotate-45"
             alt=""
             width={40}
             height={40}
@@ -29,7 +29,7 @@ const Floating = () => {
           <Image
             src={whatsapp}
             alt=""
-            className="ml-1 w-9 h-9 hover:origin-center hover:rotate-45"
+            className="ml-1 w-8 h-8 hover:origin-center hover:rotate-45"
             width={40}
             height={40}
           />

@@ -94,14 +94,17 @@ const Footer = () => {
           <Image src={email} alt="email" width={50} height={50} />
           <Link
             href="/mailto:tushardukane9@gmail.com"
-            className="text-black font-semibold"
+            className="text-black font-semibold text-sm"
           >
             tushardukane9@gmail.com
           </Link>
         </div>
-        <div className="app__footer-cards">
+        <div className="app__footer-card">
           <Image src={mobile} alt="phone" width={50} height={50} />
-          <Link href="/tel:+91 7499833141" className="text-black font-semibold">
+          <Link
+            href="/tel:+91 7499833141"
+            className="text-black font-semibold text-sm"
+          >
             +91 7499833241
           </Link>
         </div>
@@ -114,7 +117,7 @@ const Footer = () => {
       >
         <div className="app__flex">
           <input
-            className="p-text"
+            className="text-sm text-left leading-4"
             type="text"
             placeholder="Your Name"
             name="name"
@@ -122,7 +125,7 @@ const Footer = () => {
         </div>
         <div className="app__flex">
           <input
-            className="p-text"
+            className="text-sm text-left leading-4"
             type="email"
             placeholder="Your Email"
             name="email"
@@ -130,7 +133,7 @@ const Footer = () => {
         </div>
         <div>
           <textarea
-            className="p-text"
+            className="text-sm text-left leading-4"
             placeholder="Your Message"
             name="message"
           />
@@ -140,7 +143,7 @@ const Footer = () => {
           onClick={alertShow}
         >
           <span
-            className=" bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2 flex flex-row gap-2 items-center justify-center"
+            className=" bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2 flex flex-row gap-2 items-center justify-center text-sm"
             type="submit"
           >
             Send Now <SendIcon />
