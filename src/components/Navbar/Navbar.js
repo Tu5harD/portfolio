@@ -63,7 +63,7 @@ const Navbar = () => {
             height={100}
             width={100}
           />
-          <p className="text-black  text-sm font-extrabold cursor-pointer flex ">
+          <p className="text-black text-base sm:text-sm font-extrabold cursor-pointer flex ">
             <span className=" text-black"> Tushar &nbsp;</span>
             <span className="sm:block hidden">
               {" "}

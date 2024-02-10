@@ -49,7 +49,7 @@ const Header = () => {
             <h1
               tabIndex="0"
               ref={ref}
-              className="text-3xl md:text-[2.5rem] font-bold"
+              className="text-3xl md:text-[2.5rem] font-bold leading-10"
               style={{
                 transform: isInView ? "none" : "translateX(-200px)",
                 opacity: isInView ? 1 : 0,

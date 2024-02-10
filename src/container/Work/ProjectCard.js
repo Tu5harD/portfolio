@@ -15,7 +15,7 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
         }}
         className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
       >
-        <div className=" shadow-2xl shadow-blue-200">
+        <div className=" shadow-2xl shadow-blue-400">
           <div
             className="h-52 md:h-72 rounded-t-xl relative group "
             style={{
