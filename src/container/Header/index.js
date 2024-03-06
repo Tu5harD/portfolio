@@ -46,7 +46,6 @@ const Header = () => {
       <section className=" -mt-14" ref={introRef}>
         <div className="grid grid-cols-1 md:grid-cols-[1fr_0.5fr] lg:grid-cols-[1fr_0.7fr] gap-4 items-center">
           <div className="py-5 md:py-10">
-            
             <h1
               tabIndex="0"
               ref={ref}
@@ -128,7 +127,7 @@ const Header = () => {
                 </Link>
 
                 <Link
-                  href="/Resume.pdf"
+                  href="https://drive.google.com/file/d/1WJYEDgZ1syjTXkWfeVccHz3p0WYH7jJc/view?usp=sharing"
                   className=" inline-block  rounded-full text-white mt-4"
                 >
                   <span className=" bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2 flex flex-row gap-2 items-center justify-center">

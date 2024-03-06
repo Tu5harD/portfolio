@@ -1,8 +1,8 @@
 "use client";
 import React, { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import ProjectCard from "./ProjectCard";
-import ProjectTag from "./ProjectTag";
+import ProjectCard from "../src/container/Work/ProjectCard";
+import ProjectTag from "../src/container/Work/ProjectTag";
 import { AppWrap, MotionWrap } from "@/wrapper";
 import { FaDesktop } from "react-icons/fa";
 import { FaMobileScreen } from "react-icons/fa6";
@@ -65,7 +65,7 @@ const projectsData = [
   },
 ];
 
-const Work = () => {
+const AllWork = () => {
   const [tag, setTag] = useState("All");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -85,7 +85,8 @@ const Work = () => {
 
   return (
     <section id="projects">
-      <div className="head-text text-black">My Projects </div>
+      <div className="head-text text-black">Latest Projects</div>
+
       <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
         <ProjectTag
           onClick={handleTagChange}
@@ -106,7 +107,7 @@ const Work = () => {
         />
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-2 sm:gap-8 md:gap-12">
-        {filteredProjects.map((project, index) => (
+        {filteredProjects.slice(0, 3).map((project, index) => (
           <motion.li
             key={index}
             variants={cardVariants}
@@ -130,7 +131,7 @@ const Work = () => {
 };
 
 export default AppWrap(
-  MotionWrap(Work, "app__works"),
+  MotionWrap(AllWork, "app__works"),
   "work",
   "app__primarybg"
 );

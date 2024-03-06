@@ -7,29 +7,100 @@ import Image from "next/image";
 import { oad } from "../../../public/assets";
 
 const skills = [
-  { icon: "./assets/images/flutter.png", name: "Flutter", bgColor: "#f5f5f5" },
-  { icon: "./assets/images/nextjs.png", name: "Next JS", bgColor: "#f1f5f9" },
-  { icon: "./assets/images/react.png", name: "React JS", bgColor: "#cffafe" },
-  { icon: "./assets/images/figma.png", name: "Figma", bgColor: "#f3e8ff" },
-  { icon: "./assets/images/node.png", name: "Node", bgColor: "#dcfce7" },
   {
-    icon: "./assets/images/javascript.png",
-    name: "Javascript",
-    bgColor: "#fef3c7",
+    icon: "./assets/skills/react.png",
+    name: "React JS",
+    bgColor: "#CDF5FD",
   },
-  { icon: "./assets/images/redux.png", name: "Redux", bgColor: "#ede9fe" },
-  { icon: "./assets/images/mongodb.png", name: "MongoDB", bgColor: "#d1fae5" },
-  { icon: "./assets/images/html.png", name: "HTML5", bgColor: "#fecdd3" },
-  { icon: "./assets/images/css.png", name: "Css3", bgColor: "#bfdbfe" },
-
-  { icon: "./assets/images/mu5.png", name: "Material UI", bgColor: "#bfdbfe" },
-
-  { icon: "./assets/images/git.png", name: "Git", bgColor: "#fee2e2" },
-
-  { icon: "./assets/images/cpp.png", name: "CPP", bgColor: "#bfdbfe" },
+  {
+    icon: "./assets/skills/next.png",
+    name: "Next JS",
+    bgColor: "#E3E7F1",
+  },
+  {
+    icon: "./assets/skills/flutter.png",
+    name: "Flutter",
+    bgColor: "#CDF5FD",
+  },
+  {
+    icon: "./assets/skills/redux.png",
+    name: "Redux",
+    bgColor: "#C6CFFF",
+  },
+  {
+    icon: "./assets/skills/html.png",
+    name: "Html 5",
+    bgColor: "#FEA5AD",
+  },
+  {
+    icon: "./assets/skills/css.png",
+    name: "Css",
+    bgColor: "#CDF5FD",
+  },
+  {
+    icon: "./assets/skills/javascript.png",
+    name: "Javascript",
+    bgColor: "#f5f5f5",
+  },
+  {
+    icon: "./assets/skills/tailwind.png",
+    name: "Tailwind",
+    bgColor: "#C6FCE5",
+  },
+  {
+    icon: "./assets/skills/materialui.png",
+    name: "Material UI",
+    bgColor: "#CDF5FD",
+  },
+  {
+    icon: "./assets/skills/express.png",
+    name: "Express JS",
+    bgColor: "#C6CFFF",
+  },
+  {
+    icon: "./assets/skills/mongodb.png",
+    name: "MongoDB",
+    bgColor: "#f5f5f5",
+  },
+  {
+    icon: "./assets/skills/mysql.png",
+    name: "Mysql",
+    bgColor: "#C6CFFF",
+  },
+  {
+    icon: "./assets/skills/firebase.png",
+    name: "FireBase",
+    bgColor: "#C6FCE5",
+  },
+  {
+    icon: "./assets/skills/docker.png",
+    name: "Docker",
+    bgColor: "#f5f5f5",
+  },
+  {
+    icon: "./assets/skills/git.png",
+    name: "Git",
+    bgColor: "#FEA5AD",
+  },
+  {
+    icon: "./assets/skills/postman.png",
+    name: "Postman",
+    bgColor: "#C6FCE5",
+  },
 ];
 
 const experiences = [
+  {
+    year: "2021",
+    works: [
+      {
+        name: "WordPress developer",
+        company: "Start my journey as a",
+        experience: "WordPress developer",
+      },
+    ],
+    img: oad,
+  },
   {
     year: "2022",
     works: [
@@ -43,17 +114,6 @@ const experiences = [
   },
   {
     year: "2023",
-    works: [
-      {
-        name: "Web Developer",
-        company: "Google Developer Student Clubs",
-        experience: "Experience - Present",
-      },
-    ],
-    img: oad,
-  },
-  {
-    year: "2023",
     works: [{ name: "Full Stack Web Developer", company: "Freelancer" }],
     img: oad,
   },
@@ -61,9 +121,9 @@ const experiences = [
     year: "2024",
     works: [
       {
-        name: "Full Stack Web Developer",
-        company: "Bharat Intern",
-        experience: "Experience - Present",
+        name: "Flutter developer",
+        company: "Start my journey as a",
+        experience: "Flutter developer",
       },
     ],
     img: oad,
@@ -96,19 +156,21 @@ const Skills = () => {
               transition={{ duration: 0.5 }}
             >
               <div
-                className="app__flex"
+                className=" w-[30px] h-[30px] flex items-center justify-center"
                 style={{ backgroundColor: skill.bgColor }}
               >
-                {/* <img src={skill.icon} alt={skill.name} /> */}
                 <motion.img
                   src={skill.icon}
                   alt={skill.name}
-                  className=" sm:w-8 sm:h-8"
-                  // style={{ width: "200px", height: "200px" }}
+                  // style={{ width: "30px", height: "30px" }}
+                  className=" aspect-auto w-8 h-auto"
                   animate={{ rotate: 360 }}
                   transition={{ duration: 7, repeat: Infinity }}
                 />
               </div>
+              {/* <div className="w-[24px] h-[24px] flex justify-center items-center">
+                <img className=" aspect-auto w-6 h-auto" src={skill.icon} />
+              </div> */}
               <p className="text-sm leading-4 text-center text-black  font-bold">
                 {skill.name}
               </p>
